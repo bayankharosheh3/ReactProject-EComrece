@@ -1,14 +1,20 @@
 import React from "react";
-import "./styles.css"
+import styles from "./styles.module.css";
 
-const Card = () => {
-  const src = "./assets/images/4.png";
+const Card = ({ img, para, price, isNew }) => {
   return (
-    <div className="card-content">
-        <img src={src} />
-        <p>Pueraria Mirifica And Study Phyto Estrogens</p>
-        <span className="price">$599.00</span>
-        <span className="label">new</span>
+    <div className={styles.cardContent}>
+      <div className={styles.imgCon}>
+        <img src={img} />
+        <div className={styles.quickBtn}>
+          <button>QUICK VIEW</button>
+        </div>
+      </div>
+      <p>{para}</p>
+      <span className={styles.price}>{price}</span>
+      <span className={isNew == "new" ? styles.label : styles.empty}>
+        {isNew}
+      </span>
     </div>
   );
 };
