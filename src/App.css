@@ -37,9 +37,29 @@
   }
 }
 
-.container{
+.container {
+  width: 80%;
   display: flex;
   flex-direction: column;
-  width: 79%;
+  align-items: center;
+}
+
+.containerH {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.outerContainer {
   margin: auto;
+  width: 10 0%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 992px) {
+  .containerH {
+    width: 100%;
+  }
 }

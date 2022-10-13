@@ -1,26 +1,22 @@
 import React from "react";
-import "./styles.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
-import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
-
-const src = "./assets/images/2.png";
+import styles from "./styles.module.css";
 
 const Slider = () => {
+  const src = "./assets/images/2.png";
   return (
-    <div className="slide" style={{ backgroundImage: `url(${src})` }}>
-      <button className="slide-btn left">
-        <FontAwesomeIcon icon={faAngleLeft} className="slide-arrow" />
+    <div className={styles.slide} style={{ backgroundImage: `url(${src})` }}>
+      <button className={`${styles.left} ${styles.slideBtn}`}>
+        <img src="./assets/images/12.png" />
       </button>
-      <div className="slider-container">
-        <div className="slider-content">
-            <h1>Perfume Tips Tricks</h1>
-            <a>Shop Now</a>
-            <div className="line"></div>
+      <div className={styles.sliderContainer}>
+        <div className={styles.sliderContent}>
+          <h1>Perfume Tips Tricks</h1>
+          <a>Shop Now</a>
+          <div className={styles.line}></div>
         </div>
       </div>
-      <button className="slide-btn right">
-        <FontAwesomeIcon icon={faAngleRight} className="slide-arrow" />
+      <button className={`${styles.right} ${styles.slideBtn}`}>
+        <img src="./assets/images/11.png" />
       </button>
     </div>
   );

@@ -1,12 +1,15 @@
 .slide {
   height: 600px;
+  width: 100%;
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.slide-btn {
+.slideBtn {
+  font-size: 45px;
+  font-weight: 50;
   border: transparent;
   color: white;
   opacity: 1;
@@ -28,25 +31,25 @@
   border-bottom-left-radius: 65px;
   border-top-left-radius: 65px;
 }
-.slide-arrow {
+.slideArrow {
   font-size: 40px;
 }
 
-.slider-container {
-  width: 79%;
+.sliderContainer {
+  width: 86%;
   height: 100%;
   display: flex;
   justify-content: end;
   margin: auto;
 }
 
-.slider-content {
-    margin-top: 173px;
+.sliderContent {
+  margin-top: 173px;
   width: 458px;
   height: 160px;
 }
 
-.slider-content h1 {
+.sliderContent h1 {
   opacity: 1;
   color: rgba(255, 255, 255, 1);
   font-family: "VLNewParisHeadline";
@@ -59,10 +62,10 @@
   margin: 0;
 }
 
-.slider-content a {
-    display: inline-block;
-    margin-top: 20px;
-    margin-bottom: 10px;
+.sliderContent a {
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 10px;
   opacity: 1;
   color: rgba(255, 255, 255, 1);
   font-family: "ProximaNova-Bold";
@@ -75,7 +78,7 @@
   text-transform: uppercase;
 }
 
-.slider-content div {
+.sliderContent div {
   opacity: 1;
   background-color: rgba(255, 255, 255, 1);
   width: 80px;

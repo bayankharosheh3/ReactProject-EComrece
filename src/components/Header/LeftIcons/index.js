@@ -1,12 +1,13 @@
 import React from "react";
 import IconLink from "./IconLink";
-import "./styles.css"
+import styles from "./styles.module.css";
 
-const LeftIcons = () => {
+const LeftIcons = ({ hList }) => {
   return (
-    <div className="left-icon">
-      <IconLink />
-      {/* props */}
+    <div className={styles.leftIcon}>
+      {hList.map((item, index) => (
+        <IconLink listItem={item} key={index} />
+      ))}
     </div>
   );
 };

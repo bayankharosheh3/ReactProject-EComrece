@@ -1,16 +1,19 @@
-import React from 'react'
-import "./styles.css"
+import React from "react";
+import styles from "./styles.module.css";
 
-const RightIcons = () => {
-    const src = ["./assets/icons/search.svg","./assets/icons/heart.svg","/assets/icons/shape.svg"]
+const RightIcons = ({ src }) => {
   return (
-    <div className='right-icon'>
-        <a className='login-link'><span>Log in</span></a>
-        {
-            src.map(item => <a><img src={item} className='icons'/></a> )
-        }
+    <div className={styles.rightIcon}>
+      <a className={styles.loginLink}>
+        <span>Login</span>
+      </a>
+      {src.map((item, index) => (
+        <a>
+          <img src={item} className={styles.icons} />
+        </a>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default RightIcons
+export default RightIcons;

@@ -1,5 +1,6 @@
+@import url(../../style/vars.css);
 .addsBar {
-  background-color: #33333a;
+  background-color: var(--main-color);
   color: #ffffff;
   font-weight: 400;
   font-size: 12px;

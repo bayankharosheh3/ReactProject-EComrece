@@ -1,0 +1,15 @@
+.featuresSec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 1210px;
+}
+
+
+
+.cards{
+  margin-top: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

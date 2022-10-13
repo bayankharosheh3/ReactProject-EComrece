@@ -11,10 +11,13 @@ import Videos from "./components/Videos";
 import Seen from "./components/Seen";
 import Footer from "./components/Footer";
 function App() {
+
+  const sliderImg =["./assets/images/2.png","./assets/images/13.png"]
+
   return (
-    <>
+    <div className="outerContainer">
       <AddsBar />
-      <div className="container">
+      <div className="containerH">
         <Header />
       </div>
       <Slider />
@@ -27,7 +30,7 @@ function App() {
         <Seen />
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 
