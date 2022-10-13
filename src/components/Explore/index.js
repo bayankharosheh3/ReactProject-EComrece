@@ -3,11 +3,13 @@ import "./styles.css";
 import ExploreCard from "./ExploreCard";
 import ExploreCardImg from "./ExploreCardImg";
 import ExploreCardPar from "./ExploreCardPar";
+import Title from "../Title";
 
 const Explore = () => {
+  const title = "explore";
   return (
     <section className="explore-sec">
-      <h2>Explore</h2>
+      <Title titleIs={title}/>
       <div className="explore-content">
         <div className="explore-left">
           <ExploreCard />
