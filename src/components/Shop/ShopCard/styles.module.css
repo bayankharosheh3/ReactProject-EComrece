@@ -1,14 +1,18 @@
-.shop-card {
+.shopCard {
   height: 400px;
   position: relative;
 }
 
-.shop-card img {
-  width: 263px;
+.shopCard img {
+  width: 100%;
   height: 400px;
 }
 
-.shop-card .type {
+.imgCont {
+  width: 263px;
+}
+
+.shopCard .type {
   width: 100%;
   position: absolute;
   bottom: 60px;
@@ -26,4 +30,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  .shopCard {
+    padding-bottom: 30px;
+  }
 }

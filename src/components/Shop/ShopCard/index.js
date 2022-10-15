@@ -1,11 +1,11 @@
 import React from "react";
-import "./styles.css"
-const ShopCard = () => {
-  const src = "./assets/images/8.png";
+import styles from "./styles.module.css"
+const ShopCard = ({ shopCard }) => {
+  const { cardTitle, cardImg } = shopCard;
   return (
-    <div className="shop-card">
-      <img src={src} />
-      <div className="type">Pants</div>
+    <div className={styles.shopCard}>
+      <div className={styles.imgCont}><img src={cardImg} /></div>
+      <div className={styles.type}>{cardTitle}</div>
     </div>
   );
 };

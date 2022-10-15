@@ -35,6 +35,8 @@
 
 .exploreSec button {
   margin-top: 30px;
+  margin-bottom: 60px;
+
   opacity: 1;
   color: rgba(255, 255, 255, 1);
   font-family: "ProximaNova-Bold";
