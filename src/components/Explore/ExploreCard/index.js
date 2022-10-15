@@ -1,20 +1,21 @@
 import React from "react";
-import "./styles.css";
+import styles from "./styles.module.css";
 
-const ExploreCard = () => {
-    const src="./assets/images/6.png"
+const ExploreCard = ({ exploreCard, fontS, lineH }) => {
+  const { date, cardTitle, cardDescription, imgUrl } = exploreCard;
   return (
-    <div className="explore-card">
-      <div className="line"></div>
-      <p className="date">FIELDTESTED. JANUARY 19, 2017</p>
-      <h3>Connected Clothing: Raye Padit</h3>
-      <p className="explore-par">
-        As a voice for conscious fashion, Raye Padit is motivated by the belief
-        that one person’s actions, no matter how small, holds great impact. This
-        core ideal has driven him to start his three passion projects: Connected
-        Threads Asia, PeyaR, and Swagalls.
-      </p>
-      <img src={src}/>
+    <div className={styles.exploreCard}>
+      <div className={styles.textCont}>
+        <div className={styles.line}></div>
+        <p className={styles.date}>{date}</p>
+        <h3 style={{ fontSize: fontS, lineHeight:lineH }}>{cardTitle}</h3>
+        {cardDescription != "" && (
+          <p className={styles.explorePar}>{cardDescription}</p>
+        )}
+      </div>
+      <div className={styles.imgCont}>
+        {imgUrl != "" && <img src={imgUrl} />}
+      </div>
     </div>
   );
 };
