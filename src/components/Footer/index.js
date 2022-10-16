@@ -1,56 +1,69 @@
 import React from "react";
-import "./styles.css";
+import styles from "./styles.module.css";
 const Footer = () => {
+  const categoriesArray = [
+    "About us",
+    "Testimonials",
+    "Contact",
+    "Journal",
+    "Privacy Policy",
+  ];
+  const partnersArray = [
+    "Support",
+    "Shipping & Returns",
+    "Size Guide",
+    "Product Care",
+  ];
   return (
-    <section className="footer-sec">
-      <div className="container-footer">
-        <div className="footer-content">
-          <div className="categories">
+    <section className={styles.footerSec}>
+      <div className={styles.containerFooter}>
+        <div className={styles.footerContent}>
+          <div className={styles.categories}>
             <h3>Categories</h3>
-            <div className="footer-text">
-              About us
-              <br />
-              Testimonials
-              <br />
-              Contact
-              <br />
-              Journal
-              <br />
-              Privacy Policy
+            <div className={styles.footerText}>
+              {categoriesArray.map((item) => {
+                return (
+                  <>
+                    {item}
+                    <br />
+                  </>
+                );
+              })}
             </div>
           </div>
-          <div className="partners">
+          <div className={styles.partners}>
             <h3>Partners</h3>
-            <div className="footer-text">
-              Support
-              <br />
-              Shipping & Returns
-              <br />
-              Size Guide
-              <br />
-              Product Care
+            <div className={styles.footerText}>
+            {partnersArray.map((item) => {
+                return (
+                  <>
+                    {item}
+                    <br />
+                  </>
+                );
+              })}
             </div>
           </div>
-          <div className="contact-us">
+          <div className={styles.contactUs}>
             <h3>Contact us</h3>
-            <div className="footer-text">
+            <div className={styles.footerText}>
               <div>26A Pagoda St, TANGS, Singapore, 058187</div>
               <div>+65 6221 5462</div>
             </div>
           </div>
-          <div className="subscribe">
+          <div className={styles.subscribe}>
             <h3>Subscribe to newsletter</h3>
-            <div className="inter">
+            <div className={styles.inter}>
               <input type={"text"} value={"Subscribe to newsletter"} />
               <button>Subscribe</button>
             </div>
-            <div className="social-icon">
-              <img src="./assets/icons/Facebook.svg"/>
-              <img src="./assets/icons/Twitter.svg"/>
+            <div className={styles.socialIcon}>
+              <img src="./assets/icons/Facebook.svg" />
+              <img src="./assets/icons/Twitter.svg" />
             </div>
           </div>
         </div>
-        <div className="copyRight">© Copyright Matter PTE LTD 2017</div>
+        <div className={styles.copyRight}>© Copyright Matter PTE LTD 2017</div>
       </div>
     </section>
   );

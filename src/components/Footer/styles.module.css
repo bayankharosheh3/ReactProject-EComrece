@@ -1,31 +1,34 @@
-.footer-sec {
+.footerSec {
   width: 100%;
   opacity: 1;
   background-color: rgba(51, 51, 58, 1);
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 320px;
+  /* height: 320px; */
   box-sizing: border-box;
 }
 
-.footer-content {
+.footerContent {
   display: flex;
   flex-direction: row;
-  height: 175px;
-  margin-bottom: 40px;
+  /* height: 175px; */
+  /* margin-bottom: 40px; */
+  flex-wrap: wrap;
+  justify-content: space-between;
+
 }
 
-.container-footer {
+.containerFooter {
   margin-top: 40px;
   width: 80%;
 }
 
-.social-icon{
+.socialIcon{
     margin-top: 20px;
 }
 
-.social-icon img{
+.socialIcon img{
     width: 24px;
     height: 24px;
     margin-right: 10px;
@@ -34,8 +37,9 @@
 .categories {
   width: 84px;
   margin-right: 112px;
+  margin-bottom: 40px;
 }
-.footer-text {
+.footerText {
   opacity: 1;
   color: rgba(222, 222, 222, 1);
   font-family: "ProximaNova-Regular";
@@ -46,7 +50,7 @@
   text-align: left;
   line-height: 25px;
 }
-.footer-sec h3 {
+.footerSec h3 {
   opacity: 1;
   color: rgba(255, 255, 255, 1);
   font-family: "VLNewParisHeadline";
@@ -62,11 +66,15 @@
 .partners {
   width: 117px;
   margin-right: 76px;
+  margin-bottom: 40px;
 }
-
-.contact-us {
+.inter{
+  display: flex;
+}
+.contactUs {
   width: 147px;
   margin-right: 49px;
+  margin-bottom: 40px;
 }
 
 .subscribe input {
@@ -117,4 +125,12 @@ font-style: normal;
 letter-spacing: 0px;
 text-align: center;
 line-height: 25px;
+margin-bottom: 40px;
+}
+
+@media (max-width:768px) {
+
+  .subscribe input{
+    width: 100%;
+  }
 }
