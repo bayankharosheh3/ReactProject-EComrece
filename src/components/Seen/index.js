@@ -1,11 +1,13 @@
 import React from 'react'
-import "./styles.css"
+import Title from '../Title'
+import styles from "./styles.module.css"
 
 const Seen = () => {
+  const title = "as seen on"
      const src ="./assets/images/10.png"
   return (
-    <section className='seen-sec'>
-        <h2>As Seen On</h2>
+    <section className={styles.seenSec}>
+      <Title titleIs={title}/>
         <img src={src}/>
     </section>
   )

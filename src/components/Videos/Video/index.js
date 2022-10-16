@@ -1,18 +1,18 @@
 import React from "react";
-import "./styles.css";
+import styles from "./styles.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 
-const Video = () => {
-  const src = "./assets/images/9.png";
+const Video = ({ data }) => {
+  const { imgUrl, para } = data;
   return (
-    <div className="video-style">
-      <img src={src} />
-      <div className="run">
-        <FontAwesomeIcon icon={faCaretRight} className="video-icon" />
+    <div className={styles.videoStyle}>
+      <img src={imgUrl} />
+      <div className={styles.run}>
+        <FontAwesomeIcon icon={faCaretRight} className={styles.videoIcon} />
       </div>
-      <div className="video-des">
-        <p>Lorem ipsum dolor sit amet</p>
+      <div className={styles.videoDes}>
+        <p>{para}</p>
       </div>
     </div>
   );

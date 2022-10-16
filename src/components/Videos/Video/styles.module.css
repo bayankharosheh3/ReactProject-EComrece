@@ -1,16 +1,18 @@
-.video-style {
+.videoStyle {
   display: flex;
   flex-direction: column;
   position: relative;
   height: 310px;
-}
-
-.video-style img {
   width: 361px;
-  height: 240px;
+
 }
 
-.run .video-icon {
+.videoStyle img {
+  height: 240px;
+  width: 100%;
+}
+
+.run .videoIcon {
   font-size: 50px;
   opacity: 1;
   color: rgba(255, 255, 255, 1);
@@ -30,13 +32,13 @@
   right: 37%;
 }
 
-.video-des {
+.videoDes {
   height: 70px;
   display: flex;
   align-items: center;
 }
 
-.video-des p {
+.videoDes p {
   padding-left: 20px;
   opacity: 1;
   color: rgba(51, 51, 58, 1);
