@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   height: 1210px;
+  position: relative;
 }
 
 .cardsCon {

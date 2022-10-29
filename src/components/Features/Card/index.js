@@ -1,16 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./styles.module.css";
 
-const Card = ({ img, para, price, isNew }) => {
+const Card = ({ images, description, price, isNew,fun ,index}) => {
   return (
     <div className={styles.cardContent}>
       <div className={styles.imgCon}>
-        <img src={img} />
+        <img src={images[0]} />
         <div className={styles.quickBtn}>
-          <button>QUICK VIEW</button>
+          <button onClick={()=>fun(index)}>QUICK VIEW</button>
         </div>
       </div>
-      <p>{para}</p>
+      <p>{description}</p>
       <span className={styles.price}>{price}</span>
       <span className={isNew == "new" ? styles.label : styles.empty}>
         {isNew}

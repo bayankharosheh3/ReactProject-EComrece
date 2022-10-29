@@ -10,11 +10,12 @@
 
 .cardContent img {
   width: 100%;
-  height: 390px;
   margin-bottom: 12px;
 }
 
 .imgCon {
+  height: 390px;
+  overflow: hidden;
   position: relative;
 }
 
@@ -30,6 +31,7 @@
   text-align: left;
   line-height: 25px;
   height: 50px;
+  overflow: hidden;
 }
 
 .cardContent .price {
@@ -76,12 +78,14 @@
   height: 100%;
   justify-content: center;
   align-items: center;
-  display: none;
+  display: flex;
   background-color: rgba(255, 255, 255, 0.5);
+  visibility: hidden;
 }
 
-.quickBtn:hover {
+.cardContent:hover .quickBtn {
   display: flex;
+  visibility: visible;
 }
 .quickBtn button {
   width: 180px;
