@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./styles.module.css";
 const Footer = () => {
+  const [email, setEmail] = useState("");
   const categoriesArray = [
     "About us",
     "Testimonials",
@@ -21,12 +22,12 @@ const Footer = () => {
           <div className={styles.categories}>
             <h3>Categories</h3>
             <div className={styles.footerText}>
-              {categoriesArray.map((item) => {
+              {categoriesArray.map((item, index) => {
                 return (
-                  <>
+                  <div key={index}>
                     {item}
                     <br />
-                  </>
+                  </div>
                 );
               })}
             </div>
@@ -34,12 +35,12 @@ const Footer = () => {
           <div className={styles.partners}>
             <h3>Partners</h3>
             <div className={styles.footerText}>
-            {partnersArray.map((item) => {
+              {partnersArray.map((item, index) => {
                 return (
-                  <>
+                  <div key={index}>
                     {item}
                     <br />
-                  </>
+                  </div>
                 );
               })}
             </div>
@@ -54,7 +55,12 @@ const Footer = () => {
           <div className={styles.subscribe}>
             <h3>Subscribe to newsletter</h3>
             <div className={styles.inter}>
-              <input type={"text"} value={"Subscribe to newsletter"} />
+              <input
+                type={"text"}
+                placeholder={"Subscribe to newsletter"}
+                value={email}
+                onChange={(e)=>{setEmail(e.target.value)}}
+              />
               <button>Subscribe</button>
             </div>
             <div className={styles.socialIcon}>

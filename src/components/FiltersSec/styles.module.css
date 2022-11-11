@@ -1,0 +1,7 @@
+.mainContainer{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+}

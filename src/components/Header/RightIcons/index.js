@@ -8,7 +8,7 @@ const RightIcons = ({ src }) => {
         <span>Login</span>
       </a>
       {src.map((item, index) => (
-        <a>
+        <a key={index}>
           <img src={item} className={styles.icons} />
         </a>
       ))}
