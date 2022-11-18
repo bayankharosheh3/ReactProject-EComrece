@@ -284,16 +284,16 @@ const ProductsList = () => {
       },
     },
   ];
-  const [sortby, setSortby] = useState('price');
+  const [sortby, setSortby] = useState('normal');
 
   return (
     <div>
-      <AddsBar />
-      <Header />
+      {/* <AddsBar />
+      <Header /> */}
       <HeaderBackground />
       <SortBy sortbyFun={setSortby} sortby={sortby} />
       <FiltersSec data={data} sortby={sortby} />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

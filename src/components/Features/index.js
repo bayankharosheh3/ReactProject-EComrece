@@ -657,11 +657,14 @@ const Features = () => {
 
   const { products } = productsList;
 
+  const products1 = products.slice(1, 9);
+
+
   return (
     <section className={styles.featuresSec}>
       <Title titleIs={secTitle} />
       <div className={styles.cardsCon}>
-        {products.map((item, index) => {
+        {products1.map((item, index) => {
           return (
             <>
               <Card {...item} fun={handelClick} index={index} key={index} />

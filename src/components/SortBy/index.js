@@ -5,8 +5,7 @@ const SortBy = ({ sortbyFun, sortby }) => {
   return (
     <div className={Style.mainContainer}>
       <div className={Style.container}>
-        <h2 className={Style.category}>Apparels</h2>
-        <div>
+        {/* <h2 className={Style.category}>Apparels</h2> */}
           <span className={Style.sortSpan}>Sort by</span>
           <select
             name="sort"
@@ -22,7 +21,6 @@ const SortBy = ({ sortbyFun, sortby }) => {
             <option value="rating">rating</option>
             <option value="count">count</option>
           </select>
-        </div>
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ import FilteredProducts from "./FilteredProducts";
 import Style from "./styles.module.css";
 
 const FiltersSec = ({ data, sortby }) => {
-  const [selectedCategory, setSelectedCategory] = useState("electronics");
+  const [selectedCategory, setSelectedCategory] = useState("");
 
   return (
     <div className={Style.mainContainer}>

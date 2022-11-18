@@ -17,7 +17,7 @@ const Filter = ({ data, select }) => {
     <div className={Style.container}>
       <div className={Style.headContainer}>
         <span className={Style.span1}>Filters</span>
-        <span className={Style.span2}>Reset</span>
+        <button className={Style.span2} onClick={() => handelClick('')}>Reset</button>
       </div>
       <ul>
         {categories.map((category, index) => (

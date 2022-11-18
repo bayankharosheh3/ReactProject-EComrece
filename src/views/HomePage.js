@@ -14,10 +14,6 @@ const HomePage = () => {
   return (
     <div>
       <div className="outerContainer">
-        <AddsBar />
-        <div className="containerH">
-          <Header />
-        </div>
         <Slider />
         <div className="container">
           <Features />
@@ -27,7 +23,6 @@ const HomePage = () => {
           <Videos />
           <Seen />
         </div>
-        <Footer />
       </div>
     </div>
   );

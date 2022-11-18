@@ -1,9 +1,11 @@
 import "./App.css";
-import HomePage from "./views/HomePage";
-import ProductsList from "./views/ProductsList";
+import Router from "./Router";
+// import HomePage from "./views/HomePage";
+// import ProductsList from "./views/ProductsList";
+
 
 function App() {
-  return <ProductsList />;
+  return <Router />;
 }
 
 export default App;

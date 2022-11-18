@@ -1,7 +1,12 @@
 @import url(../../style/vars.css);
 
-.header {
+.container{
   width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.header {
+  width: 80%;
   height: 80px;
   display: flex;
   align-items: center;
