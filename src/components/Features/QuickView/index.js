@@ -4,24 +4,24 @@ import RightSide from "./RightSide";
 import styles from "./styles.module.css";
 const QuickView = ({
   title,
-  images,
+  image,
   description,
   price,
   rating,
   stock,
   brand,
   category,
-  isNew,
-  fun,
-  index,
   onclick,
 }) => {
+  const images = [image];
   return (
     <div className={styles.layer}>
       <div className={styles.quickView}>
         <div className={styles.top}>
           <h4>{title}</h4>
-          <button onClick={onclick}><p>X</p></button>
+          <button onClick={onclick}>
+            <p>X</p>
+          </button>
         </div>
         <div className={styles.quickContent}>
           <LeftSide images={images} />

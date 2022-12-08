@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import AddsBar from "./../components/AddsBar";
 import Header from "./../components/Header";
 import Slider from "./../components/Slider";
@@ -9,8 +9,26 @@ import Shop from "./../components/Shop";
 import Videos from "./../components/Videos";
 import Seen from "./../components/Seen";
 import Footer from "./../components/Footer";
+import { useCookies } from "react-cookie";
+import axios from "axios";
 
 const HomePage = () => {
+  const [cookie, setCookie] = useCookies();
+  const [userData, setUserData] = useState();
+
+  console.log(cookie);
+  useEffect(() => {
+    axios
+      .get("http://restapi.adequateshop.com/api/users/148307", {
+        headers: {
+          Authorization: `Bearer ${cookie.token}`,
+        },
+      })
+      .then((user) => {
+        setUserData(user.data);
+        console.log(userData);
+      });
+  }, []);
   return (
     <div>
       <div className="outerContainer">

@@ -38,7 +38,7 @@ const FilteredProducts = ({ data, selected, sortby }) => {
   const [selectedItem, setSelectedItem] = useState(null);
 
   const handelClick = (index) => {
-    const selectedItem = sortedProducts.products[index];
+    const selectedItem = sortedProducts[index];
     setSelectedItem(selectedItem);
     setDisplay(!display);
   };
