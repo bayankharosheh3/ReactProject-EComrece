@@ -4,7 +4,7 @@ import RightSide from "./RightSide";
 import styles from "./styles.module.css";
 const QuickView = ({
   title,
-  image,
+  images,
   description,
   price,
   rating,
@@ -13,7 +13,6 @@ const QuickView = ({
   category,
   onclick,
 }) => {
-  const images = [image];
   return (
     <div className={styles.layer}>
       <div className={styles.quickView}>

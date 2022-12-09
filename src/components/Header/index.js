@@ -13,17 +13,20 @@ const Header = () => {
 
   const matterSrc = "./assets/images/matter.jpg";
   const iconsSrc = [
-    "./assets/icons/search.svg",
-    "./assets/icons/heart.svg",
-    "/assets/icons/shape.svg",
+    { src: "./assets/icons/search.svg", to: "/" },
+    { src: "./assets/icons/heart.svg", to: "/" },
+    { src: "/assets/icons/shape.svg", to: "cart" },
   ];
-  const h2List = ["shop", "fabric", "journal", "about"];
+  const h2List = [
+    { name: "Home", to: "/" },
+    { name: "Products List", to: "productsList" },
+  ];
 
   return (
     <div className={styles.container}>
       <div className={styles.header}>
         <div className={styles.leftSide}>
-          <Link to='/'>
+          <Link to="/">
             <img src={matterSrc} className={styles.matterIcon} />
           </Link>
           <div

@@ -11,7 +11,7 @@ const LeftSide = ({ images }) => {
     setSelected(im)
     // btnRef.current.focus();
   };
-  // console.log(images);
+  console.log(images);
   return (
     <div className={Styles.leftSide}>
       <div className={Styles.imgs}>

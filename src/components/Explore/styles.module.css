@@ -10,13 +10,12 @@
 .exploreContent {
   display: flex;
   justify-content: space-between;
-  overflow: scroll;
 
 }
 
 .exploreRight {
   width: 97%;
-  height: 560px;
+  /* height: 560px; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

@@ -16,7 +16,7 @@ const HomePage = () => {
   const [cookie, setCookie] = useCookies();
   const [userData, setUserData] = useState();
 
-  console.log(cookie);
+  console.log(cookie.token);
   useEffect(() => {
     axios
       .get("http://restapi.adequateshop.com/api/users/148307", {
@@ -29,6 +29,7 @@ const HomePage = () => {
         console.log(userData);
       });
   }, []);
+
   return (
     <div>
       <div className="outerContainer">

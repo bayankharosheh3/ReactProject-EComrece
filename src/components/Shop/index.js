@@ -24,7 +24,7 @@ const Shop = () => {
     },
    ]
   return (
-    <section className={styles.shopSec}>
+    <div className={styles.shopSec}>
       <Title titleIs={title}/>
       <div className={styles.shopCards}>
         {shopCards.map(card => {
@@ -32,7 +32,7 @@ const Shop = () => {
         })}
         
       </div>
-    </section>
+    </div>
   );
 };
 

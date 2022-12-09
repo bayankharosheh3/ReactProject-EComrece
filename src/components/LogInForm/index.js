@@ -1,16 +1,23 @@
 import axios from "axios";
 import React, { Component, useState } from "react";
 import { useCookies } from "react-cookie";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import Style from "./styles.module.css";
 
 const LogInForm = () => {
+  const navigate = useNavigate();
   const [logIn, setLogIn] = useState({ email: "", password: "" });
-  const [cookies, setCookie] = useCookies(["name"]);
+  const [cookies, setCookie] = useCookies();
+  const [toHome, setToHome] = useState(false);
+  const [error, setError] = useState("");
 
   const handelChange = (key, value) => {
     setLogIn({ ...logIn, [key]: value });
   };
+
+  if (toHome == true) {
+    return <Navigate to="/" />;
+  }
 
   const handelClick = async () => {
     const response = await axios.post(
@@ -18,8 +25,15 @@ const LogInForm = () => {
       logIn
     );
     console.log(response);
-    setCookie("token", response.data.data.Token);
-    setCookie("name", response.data.data.Name);
+
+    if (response.data.data !== null) {
+      setCookie("token", response.data.data.Token);
+      setCookie("name", response.data.data.Name);
+      setToHome(true);
+    } else {
+      setError(response.data.message);
+      console.log(response.data.message);
+    }
   };
 
   return (
@@ -62,9 +76,10 @@ const LogInForm = () => {
         <div className={Style.linkContainer}>
           <Link className={Style.link}>Forget password?</Link>
         </div>
-        <Link className={Style.btn} onClick={handelClick}>
+        <div style={{ color: "red" }}>{error}</div>
+        <button className={Style.btn} onClick={handelClick}>
           Sign in
-        </Link>
+        </button>
         <div className={Style.moveTo}>
           <span>Don't have an account?</span>
           {"  "}

@@ -1,5 +1,23 @@
 @import url(../../../style/vars.css);
 
+.number {
+  position: absolute;
+  top: -19px;
+  right: 3px;
+  font-size: 9px;
+  font-weight: 700;
+  background-color: #cf4848;
+  color: white;
+  border-radius: 10px;
+  width: 17px;
+  height: 17px;
+  line-height: 17px;
+  text-align: center;
+}
+
+.linkIcon {
+  position: relative;
+}
 .rightIcon {
   width: 100%;
   display: flex;
@@ -17,6 +35,8 @@
   text-align: left;
   line-height: 40px;
   text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
 }
 
 .icons {

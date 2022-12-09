@@ -4,11 +4,11 @@ import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import styles from "./styles.module.css";
 import { Link } from "react-router-dom";
 
-const IconLink = ({ listItem }) => {
+const IconLink = ({ listItem, to }) => {
   return (
-    <Link to='productsList' className={styles.iconLink}> 
+    <Link to={to} className={styles.iconLink}>
       <span>{listItem}</span>
-      <FontAwesomeIcon icon={faAngleDown} className="aws-icon"/>
+      <FontAwesomeIcon icon={faAngleDown} className="aws-icon" />
     </Link>
   );
 };
