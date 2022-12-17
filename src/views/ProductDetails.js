@@ -1,9 +1,21 @@
-import React from 'react'
+import React from "react";
+import { useParams } from "react-router-dom";
+import { ProductsContext } from "../components/ProductsProvider";
+import { useContext } from "react";
+import Details from "../components/Deitals";
 
 const ProductDetails = () => {
-  return (
-    <div>ProductDetails</div>
-  )
-}
+  const { productID } = useParams();
+  console.log(productID);
+  const data = useContext(ProductsContext);
+  const { products } = data;
 
-export default ProductDetails
+  console.log(data);
+  return (
+    <div>
+      <Details {...products[productID]} />
+    </div>
+  );
+};
+
+export default ProductDetails;

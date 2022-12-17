@@ -1,7 +1,11 @@
 import React from "react";
+import { useContext } from "react";
+import { ProductsContext } from "../ProductsProvider";
 import CartItem from "./CartItem";
 import Style from "./styles.module.css";
 const Cart = () => {
+  const { cartProducts } = useContext(ProductsContext);
+
   return (
     <div className={Style.container}>
       <h2>Shopping Cart</h2>
@@ -13,10 +17,7 @@ const Cart = () => {
           <li className={Style.subtotal}>Subtotal</li>
         </ul>
       </div>
-      <CartItem />
-      <CartItem />
-      <CartItem />
-      <CartItem />
+      {cartProducts && cartProducts.map((product) => <CartItem {...product} />)}
     </div>
   );
 };

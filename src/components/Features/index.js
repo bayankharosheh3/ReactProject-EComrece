@@ -600,6 +600,7 @@ const Features = () => {
   const [display, setDisplay] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
 
+
   const handelClick = (index) => {
     const selectedItem = products[index];
     setSelectedItem(selectedItem);
@@ -626,7 +627,6 @@ const Features = () => {
         })}
       </div>
       {display && <QuickView {...selectedItem} onclick={exitClick} />} 
-      {console.log(selectedItem)}
     </section>
   );
 };

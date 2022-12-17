@@ -8,7 +8,6 @@ const FilteredProducts = ({ data, selected, sortby }) => {
   const [itemsNumber, setItemsNumber] = useState(4);
 
   const filteredArray = data.filter((product) => {
-    // console.log(product.category);
     if (selected == "") {
       return product;
     } else return product.category === selected;
@@ -54,7 +53,7 @@ const FilteredProducts = ({ data, selected, sortby }) => {
         {sortedProducts.map((product, index) => {
           return (
             <Card
-              images={[product.image]}
+              images={[product.images[0]]}
               description={product.description}
               price={product.price}
               isNew={""}

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import LeftSide from "./LeftSide";
 import RightSide from "./RightSide";
 import styles from "./styles.module.css";
-const QuickView = ({
+const Details = ({
   title,
   images,
   description,
@@ -18,12 +18,6 @@ const QuickView = ({
   return (
     <div className={styles.layer}>
       <div className={styles.quickView}>
-        <div className={styles.top}>
-          <h4>{title}</h4>
-          <button onClick={onclick}>
-            <p>X</p>
-          </button>
-        </div>
         <div className={styles.quickContent}>
           <LeftSide images={images} />
           <RightSide
@@ -45,4 +39,4 @@ const QuickView = ({
   );
 };
 
-export default QuickView;
+export default Details;

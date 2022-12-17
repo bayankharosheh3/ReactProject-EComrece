@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useContext } from "react";
-import { ProductsContext } from "../../../../ProductsProvider";
+import { ProductsContext } from "../../../ProductsProvider";
 import Styles from "./styles.module.css";
 const ForthRow = ({ id }) => {
   const [quantity, setQuantity] = useState(1);

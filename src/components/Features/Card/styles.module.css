@@ -46,6 +46,11 @@
   line-height: 30px;
 }
 
+.price:before {
+  content: "£";
+}
+
+
 .cardContent .label {
   display: inline-block;
   position: absolute;

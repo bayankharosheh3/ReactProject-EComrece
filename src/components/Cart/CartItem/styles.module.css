@@ -6,7 +6,7 @@
 }
 
 .item {
-  width: 53%;
+  width: 45%;
   display: flex;
 }
 
@@ -23,6 +23,8 @@
 
 .productImage {
   width: 35%;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+
 }
 
 .productImage img {

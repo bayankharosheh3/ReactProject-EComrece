@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import AddsBar from "./../components/AddsBar";
-import Header from "./../components/Header";
 import Slider from "./../components/Slider";
 import Features from "./../components/Features";
 import About from "./../components/About";
@@ -8,15 +6,14 @@ import Explore from "./../components/Explore";
 import Shop from "./../components/Shop";
 import Videos from "./../components/Videos";
 import Seen from "./../components/Seen";
-import Footer from "./../components/Footer";
 import { useCookies } from "react-cookie";
 import axios from "axios";
+import { Outlet } from "react-router-dom";
 
 const HomePage = () => {
   const [cookie, setCookie] = useCookies();
   const [userData, setUserData] = useState();
 
-  console.log(cookie.token);
   useEffect(() => {
     axios
       .get("http://restapi.adequateshop.com/api/users/148307", {
@@ -26,12 +23,12 @@ const HomePage = () => {
       })
       .then((user) => {
         setUserData(user.data);
-        console.log(userData);
       });
   }, []);
 
   return (
     <div>
+      {/* <Outlet /> */}
       <div className="outerContainer">
         <Slider />
         <div className="container">

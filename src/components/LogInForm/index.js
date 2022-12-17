@@ -1,7 +1,9 @@
 import axios from "axios";
 import React, { Component, useState } from "react";
+import { useContext } from "react";
 import { useCookies } from "react-cookie";
 import { Link, Navigate, useNavigate } from "react-router-dom";
+import { ProductsContext } from "../ProductsProvider";
 import Style from "./styles.module.css";
 
 const LogInForm = () => {
@@ -10,6 +12,9 @@ const LogInForm = () => {
   const [cookies, setCookie] = useCookies();
   const [toHome, setToHome] = useState(false);
   const [error, setError] = useState("");
+
+  const {setLoggedIn} = useContext(ProductsContext);
+
 
   const handelChange = (key, value) => {
     setLogIn({ ...logIn, [key]: value });
@@ -24,15 +29,14 @@ const LogInForm = () => {
       "http://restapi.adequateshop.com/api/authaccount/login",
       logIn
     );
-    console.log(response);
 
     if (response.data.data !== null) {
       setCookie("token", response.data.data.Token);
       setCookie("name", response.data.data.Name);
       setToHome(true);
+      setLoggedIn(true)
     } else {
       setError(response.data.message);
-      console.log(response.data.message);
     }
   };
 

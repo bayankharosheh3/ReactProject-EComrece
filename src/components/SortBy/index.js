@@ -14,12 +14,11 @@ const SortBy = ({ sortbyFun, sortby }) => {
             value={sortby}
             onChange={(e) => {
               sortbyFun(e.target.value);
-              console.log(e.target.value);
             }}
           >
             <option value="price">price</option>
             <option value="rating">rating</option>
-            <option value="count">count</option>
+            <option value="count">name</option>
           </select>
       </div>
     </div>

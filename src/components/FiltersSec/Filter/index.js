@@ -3,10 +3,13 @@ import Style from "./styles.module.css";
 
 const Filter = ({ data, select }) => {
   const categories = [
-    "electronics",
-    "jewelery",
-    "men's clothing",
-    "women's clothing",
+    "smartphones",
+    "laptops",
+    "fragrances",
+    "skincare",
+    "groceries",
+    "home-decoration",
+    "furniture",
   ];
 
   const handelClick = (category) => {
@@ -17,7 +20,9 @@ const Filter = ({ data, select }) => {
     <div className={Style.container}>
       <div className={Style.headContainer}>
         <span className={Style.span1}>Filters</span>
-        <button className={Style.span2} onClick={() => handelClick('')}>Reset</button>
+        <button className={Style.span2} onClick={() => handelClick("")}>
+          Reset
+        </button>
       </div>
       <ul>
         {categories.map((category, index) => (

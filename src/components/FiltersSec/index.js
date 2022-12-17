@@ -8,7 +8,8 @@ const FiltersSec = ({ data, sortby }) => {
   const [selectedCategory, setSelectedCategory] = useState("");
 
   return (
-    <div className={Style.mainContainer}>
+    <div className={Style.filtered}>
+      <div className={Style.mainContainer}>
       <Filter data={data} select={setSelectedCategory} />
       <FilteredProducts
         data={data}
@@ -16,6 +17,8 @@ const FiltersSec = ({ data, sortby }) => {
         sortby={sortby}
       />
     </div>
+    </div>
+    
   );
 };
 
